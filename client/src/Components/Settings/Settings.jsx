@@ -51,6 +51,25 @@ export default function Settings() {
             });
     }
 
+    function downloadDatabase() {
+        axios
+            .get(`${process.env.REACT_APP_API_URL}/downloadDatabase`, {
+                auth: { username: window.localStorage.getItem("username"), password: window.localStorage.getItem("password") },
+                responseType: "blob",
+            })
+            .then((data) => {
+                const blobUrl = URL.createObjectURL(data.data);
+
+                const link = document.createElement("a");
+                link.href = blobUrl;
+                link.download = "database.xlsx";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(blobUrl);
+            });
+    }
+
     if (error)
         return (
             <>
@@ -91,6 +110,10 @@ export default function Settings() {
                         <br />
                         <button onClick={() => updateSetting()} className="Submit-button">
                             Update
+                        </button>
+                        <br />
+                        <button onClick={() => downloadDatabase()} className="Submit-button">
+                            Download Database
                         </button>
                     </div>
                 </div>

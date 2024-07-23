@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const config = require("./config");
 const http = require("http");
 const basicAuth = require("express-basic-auth");
+const XLSX = require("xlsx");
 
 const app = express();
 app.use(express.json());
@@ -313,6 +314,30 @@ Config.findOne().then((configSetting) => {
         const config = await Config.findOne();
 
         res.send(config);
+    });
+
+    app.get("/downloadDatabase", async (req, res) => {
+        const info = await Info.find();
+
+        const data = [];
+
+        for (const store of info) {
+            data.push({
+                storeName: store.storeName,
+                storeLocation: store.storeLocation,
+                lastVisit: store.lastVisit,
+                nextVisit: store.nextVisit,
+            });
+        }
+
+        const worksheet = XLSX.utils.json_to_sheet(data);
+        const workbook = XLSX.utils.book_new();
+
+        XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
+
+        const file = XLSX.writeFile(workbook, "database.xlsx");
+
+        res.download("./database.xlsx");
     });
 
     http.createServer(app).listen(config.Port, config.Host, () => {
