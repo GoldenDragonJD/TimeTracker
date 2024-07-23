@@ -1,0 +1,105 @@
+.option-menu-button {
+    all: unset;
+    cursor: pointer;
+    margin: 10px;
+    margin-right: -1px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 100px 0 0 100px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.option-menu {
+    background-color: black;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: 50px;
+    top: -5px;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.option-menu-container {
+    position: relative;
+    display: flex;
+    right: var(--option);
+    transition: all ease-in-out 0.3s;
+}
+
+.separator-line {
+    width: 90%;
+    height: 1px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.option-button {
+    all: unset;
+    color: #8ffcff;
+    background-color: rgb(0, 0, 0);
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    width: 60%;
+    border-bottom: 1px solid #8ffcff;
+}
+
+.option-button-bottom {
+    all: unset;
+    color: #8ffcff;
+    background-color: rgb(0, 0, 0);
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    width: 60%;
+}
+
+.isSelected {
+    background-color: #005255;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.hidden-button-left {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    z-index: 3;
+}
+
+.hidden-button-right {
+    position: absolute;
+    top: 45vh;
+    right: 50;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    z-index: 3;
+}
+
+@media screen and (min-width: 768px) {
+    .option-menu-container {
+        right: 40px;
+    }
+
+    .option-menu {
+        border-radius: 10px;
+    }
+}

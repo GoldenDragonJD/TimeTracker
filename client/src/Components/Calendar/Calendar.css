@@ -1,0 +1,224 @@
+.Calendar-container * {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.calendar-control-container {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.calendar-control-container button {
+    all: unset;
+    color: rgb(0, 0, 0);
+    padding: 5px 5px;
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.calendar-control-container .next {
+    text-align: end;
+}
+
+.calendar-control-container .edit-button {
+    all: unset;
+    margin: 0;
+    background-color: white;
+    padding: 1px 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 32px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    font-weight: 900;
+}
+
+.calendar-control-container .inEdit {
+    background-color: rgb(255, 225, 56);
+}
+
+.Calendar-container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 800px;
+    border-radius: 10px;
+}
+
+.today {
+    background-color: #8ffcff;
+}
+
+.week-days {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    width: 100%;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.week-day {
+    margin: 0px 0px;
+    padding: 0;
+    font-size: 8px;
+    width: 14.28571428571429%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.year-container {
+    display: flex;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.month-days {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 400px;
+}
+
+.day-of-week {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 14.28571428571429%;
+    height: 100%;
+}
+
+.day-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 20%;
+    align-items: flex-start;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.5s ease-in-out;
+    overflow-y: auto;
+}
+
+.not-month {
+    background-color: rgb(44, 44, 44);
+}
+
+.day-number {
+    margin: 5px;
+    padding: 0;
+    font-size: 12px;
+}
+
+.info-data {
+    font-size: 6px;
+    margin: 0 auto;
+    width: 90%;
+    background-color: rgb(255, 130, 130);
+    border-radius: 3px;
+    padding: 1px;
+    color: black;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1px;
+}
+
+.month-name {
+    position: relative;
+    font-size: 8px;
+    text-align: center;
+    margin: 0 auto;
+    top: -24px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 1.3px;
+    border-radius: 0px 0px 5px 5px;
+    border: 1px solid black;
+    border-top: 0px;
+    font-weight: 700;
+}
+
+.year-container {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.calendar-selectable {
+    cursor: pointer;
+    background-color: orange;
+}
+
+.old-date {
+    background-color: rgb(255, 242, 0);
+}
+
+.new-date {
+    background-color: rgb(0, 255, 0);
+}
+
+.button-selectable {
+    cursor: pointer;
+}
+
+.calendar-control-container .undo-button {
+    width: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    .Calendar-container {
+        width: 100%;
+    }
+
+    .month-name {
+        font-size: 5px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .Calendar-container {
+        width: 100%;
+    }
+
+    .month-name {
+        font-size: 6px;
+    }
+
+    .calendar-control-container .edit-button:hover {
+        background-color: rgb(255, 236, 130);
+    }
+}

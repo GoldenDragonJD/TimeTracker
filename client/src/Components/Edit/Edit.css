@@ -1,0 +1,36 @@
+.Default-button {
+    margin-left: 3px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.preview-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    margin: 0px;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    background-color: black;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.Delete-button {
+    all: unset;
+    color: rgb(0, 0, 0);
+    background-color: rgb(163, 0, 0);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 10px;
+}

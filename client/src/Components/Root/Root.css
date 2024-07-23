@@ -1,0 +1,263 @@
+:root {
+    --option-off: 0px;
+    --option-on: 200px;
+    --option: var(--option-off);
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.Root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+    height: 100vh;
+}
+
+.Root-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(44, 44, 44);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.Root-title {
+    margin: auto 0px;
+}
+
+.info-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.info-bar-clock {
+    border: 3px solid black;
+    border-radius: 100%;
+}
+
+.info-bar-date {
+    background-color: white;
+    color: black;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.add-store {
+    all: unset;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Root-search {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    height: 30px;
+}
+
+.search-bar {
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+/* .search-bar * {
+    height: 24px;
+} */
+
+.search-bar input {
+    all: unset;
+    height: 24px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0 5px;
+    font-size: 14px;
+    background-color: white;
+}
+
+/* .search-bar button {
+    all: unset;
+    background-color: white;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+.add-store-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.Root-graph {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.Element-container {
+    all: unset;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    height: 30px;
+}
+
+.Element-Title {
+    text-align: center;
+    margin: 0;
+    border: 1px solid black;
+    font-size: 14px;
+    height: 100%;
+}
+
+.refresh-button {
+    all: unset;
+    display: none;
+}
+
+.Element-element {
+    display: flex;
+    margin: 0;
+    border: 1px solid black;
+    font-size: 11px;
+    justify-content: center;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    height: 100%;
+    align-items: center;
+}
+
+.refresh-button {
+    display: none;
+}
+
+.Element-store {
+    width: 35%;
+}
+
+.Element-visits {
+    width: 25%;
+}
+
+.Element-days {
+    width: 15%;
+}
+
+.Ready {
+    background-color: rgb(145, 252, 103);
+    cursor: pointer;
+    height: 50px;
+}
+
+.Ready .Element-element {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ready .refresh-button {
+    display: none;
+}
+
+.inEdit {
+    background-color: rgb(255, 225, 56);
+}
+
+.Selectable {
+    cursor: pointer;
+    height: 50px;
+}
+
+.Selectable .Element-element {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Selectable .refresh-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 15%;
+}
+
+.Selectable .refresh-button h3 {
+    margin: 0;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 2px 1px;
+    text-align: center;
+    width: 80%;
+}
+
+.Selectable .Element-days {
+    display: none;
+}
+
+.Back {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: white;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+
+.Element-container span {
+    height: 100%;
+}
+
+.Root-input {
+    width: 20%;
+}
+
+@media only screen and (max-width: 800px) {
+    .Root {
+        width: 95%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .add-store {
+        font-size: 12px;
+    }
+
+    .Element-container p {
+        height: 100%;
+    }
+}

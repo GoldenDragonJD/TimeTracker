@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(44, 44, 44);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#root {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    #root {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+}

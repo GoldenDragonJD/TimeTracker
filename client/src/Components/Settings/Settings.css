@@ -1,0 +1,51 @@
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.settings-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: fit-content;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.mail-jet {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#mailJet {
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.update-email {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mailJetOn {
+    background-color: purple;
+}
