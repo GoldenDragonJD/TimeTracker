@@ -30,17 +30,14 @@ connectMongoDB();
 const Info = require("./Models/info");
 const Config = require("./Models/config");
 
-let interval = setInterval(() => {
-    Config.findOne().then((config) => {
-        if (config.MailJet) {
-            SendEmail(config.yourEmail);
-        }
-    });
-}, 1000 * 60 * 60 * 24);
-
-let password = "";
-
 Config.findOne().then((configSetting) => {
+    let interval = setInterval(() => {
+        Config.findOne().then((config) => {
+            if (config.MailJet) {
+                SendEmail(config.yourEmail);
+            }
+        });
+    }, 1000 * 60 * 60 * 24);
     app.use(basicAuth({ users: { admin: configSetting.password } }));
     app.post("/addInfo", async (req, res) => {
         const storeName = req.body.storeName;
