@@ -219,7 +219,7 @@ Config.findOne().then((configSetting) => {
         const data = JSON.stringify({
             Messages: [
                 {
-                    From: { Email: "lisbe2003@gmail.com", Name: "Juan's App" },
+                    From: { Email: "YourEmail@Address.com", Name: "Name of Email" },
                     To: [{ Email: email, Name: "User" }],
                     Subject: "Next Week's Upcoming Jobs",
                     TextPart: string,
